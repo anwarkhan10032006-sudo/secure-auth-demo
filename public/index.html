@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secure Auth Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Ambient background glow (decorative) -->
+    <div class="bg-glow glow-a" aria-hidden="true"></div>
+    <div class="bg-glow glow-b" aria-hidden="true"></div>
+
     <div class="container">
         <h1>Secure Authentication System</h1>
-        
+
         <div class="panels">
             <!-- Registration Panel -->
             <div class="card">
@@ -33,7 +40,7 @@
         <!-- Live Database Panel -->
         <div class="database-panel">
             <div class="db-header">
-                <h2>Live Database Records</h2>
+                <h2><span class="live-dot" aria-hidden="true"></span>Live Database Records</h2>
                 <button onclick="loadDatabase()" class="refresh-btn">Refresh Table</button>
             </div>
             <pre id="db-view">Database is empty.</pre>

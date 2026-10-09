@@ -1,9 +1,12 @@
 // Display alert messages in the UI
 function showAlert(elementId, message, isSuccess) {
     const alertBox = document.getElementById(elementId);
-    alertBox.style.display = 'block';
     alertBox.textContent = message;
-    alertBox.style.backgroundColor = isSuccess ? '#28a745' : '#dc3545';
+
+    // Reset classes and force reflow so the entrance animation replays each time
+    alertBox.className = 'alert';
+    void alertBox.offsetWidth;
+    alertBox.classList.add('show', isSuccess ? 'success' : 'error');
 }
 
 // 1. Send Registration Data
