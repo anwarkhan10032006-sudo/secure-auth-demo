@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Auth Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Secure Authentication System</h1>
+        
+        <div class="panels">
+            <!-- Registration Panel -->
+            <div class="card">
+                <h2>Register User</h2>
+                <input type="text" id="reg-user" placeholder="Enter Username">
+                <input type="password" id="reg-pass" placeholder="Enter Password">
+                <button onclick="registerUser()">Register</button>
+                <div id="reg-alert" class="alert"></div>
+            </div>
+
+            <!-- Login Panel -->
+            <div class="card">
+                <h2>User Login</h2>
+                <input type="text" id="log-user" placeholder="Enter Username">
+                <input type="password" id="log-pass" placeholder="Enter Password">
+                <button onclick="loginUser()">Login</button>
+                <div id="log-alert" class="alert"></div>
+            </div>
+        </div>
+
+        <!-- Live Database Panel -->
+        <div class="database-panel">
+            <div class="db-header">
+                <h2>Live Database Records</h2>
+                <button onclick="loadDatabase()" class="refresh-btn">Refresh Table</button>
+            </div>
+            <pre id="db-view">Database is empty.</pre>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
